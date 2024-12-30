@@ -13,7 +13,7 @@ async function PanelContent() {
       <CardHeader>
         <CardTitle>
             <div className="text-xl font-bold text-primary">
-               Bem-vindo ao painel, {session.user?.name}!
+               Bem-vindo ao painel, {session?.user?.name}!
             </div>
         </CardTitle>
       </CardHeader>
