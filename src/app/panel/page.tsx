@@ -1,6 +1,6 @@
 import SkeletonPanel from "@/app/panel/_components/SkeletonPanel";
 import { Suspense } from 'react';
-import { auth, signOut } from "@/modules/services/auth";
+import { signOut } from "@/modules/services/auth";
 import { redirect } from "next/navigation";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -8,11 +8,6 @@ import { RiLogoutBoxLine, RiArrowLeftLine } from "react-icons/ri";
 import Link from "next/link";
 
 async function PanelContent() {
-  const session = await auth();
-  if (!session) {
-    redirect('/');
-  }
-
   return (
     <Card className="w-80 rounded-xl shadow-2xl bg-stone-900 text-card-foreground transition-all duration-300 hover:shadow-xl">
       <CardHeader>
